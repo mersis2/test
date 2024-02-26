@@ -1,0 +1,22 @@
+<html>
+
+
+
+
+<textarea type="text" id="change"></textarea>
+Output:
+
+
+<div id="out"></div>
+
+<script>
+
+    change.addEventListener("input", function (e) {
+
+        encoded_string = change.value.slice(change.value.indexOf("/#")+2);
+        document.getElementById("out").innerHTML = atob(atob(encoded_string)) + "<br><br>" + atob(atob(atob(encoded_string)));
+    });
+    
+    </script>
+
+</html>
